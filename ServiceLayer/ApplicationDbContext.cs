@@ -5,6 +5,10 @@ namespace ServiceLayer
 {
     public partial class ApplicationDbContext: DbContext
     {
+        public ApplicationDbContext()
+        {
+        }
+
         public ApplicationDbContext(DbContextOptions options): base(options)
         {
 

@@ -40,3 +40,4 @@ C:\Users\bhara\Desktop\AppDev Final\FinalProject\FinalProject\obj\Debug\net6.0\F
 C:\Users\bhara\Desktop\AppDev Final\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.genruntimeconfig.cache
 C:\Users\bhara\Desktop\AppDev Final\FinalProject\FinalProject\obj\Debug\net6.0\ref\FinalProject.dll
 C:\Users\bhara\Desktop\AppDev Final\FinalProject\FinalProject\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\FinalProject\bin\Debug\net6.0\FluentValidation.dll

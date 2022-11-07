@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pWOxWMM2W3k4z6toVzzEFCejC9eWp6CH2IgVC88t7wFJzINgAdurkZ0GRIvMFNyZz5BpYbAhIavYNaxJRc2s0g==",
+  "dgSpecHash": "LzyLml1KHJkLT0cbMWsH4RZdUCPMe6/SHmuh+VBjTvgw5/ydn6KgYczFvET9lc+BGxBMkQSfGzaIYWCX+VZJWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bhara\\Desktop\\AppDev Final\\FinalProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bhara\\.nuget\\packages\\efcore.namingconventions\\6.0.0\\efcore.namingconventions.6.0.0.nupkg.sha512",
+    "C:\\Users\\bhara\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",

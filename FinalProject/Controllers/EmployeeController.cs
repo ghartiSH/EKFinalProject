@@ -52,12 +52,20 @@ namespace FinalProject.Controllers
         [HttpPost]
         public IActionResult AddEmployee(EmployeeViewModel employee)
         {
-            if (ModelState.IsValid)
+            var allPositions = employeeService.GetAllPositions();
+            ViewData["PositionName"] = new SelectList(allPositions, "PositionId", "Name");
+
+            var result = employeeService.Validate(employee);
+            if (result.IsValid)
             {
                 employee.PositionId = int.Parse(employee.PositionName);
 
                 employeeService.AddEmployee(employee);
                 return RedirectToAction("Index");
+            }
+            foreach (var x in result.Errors)
+            {
+                ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
             }
             return View();
         }

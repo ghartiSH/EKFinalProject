@@ -1,6 +1,7 @@
-﻿
-using DomainLayer.Models;
+﻿using DomainLayer.Models;
+using FluentValidation.Results;
 using ServiceLayer.ViewModels;
+using ServiceLayer.ViewModels.Validators;
 using System.Linq.Dynamic.Core;
 
 namespace ServiceLayer.EmployeeService
@@ -243,6 +244,13 @@ namespace ServiceLayer.EmployeeService
 
             _context.Update(oldHistory);
             _context.SaveChanges();
+        }
+
+        public ValidationResult Validate(EmployeeViewModel employee)
+        {
+            EmployeeValidator ev = new EmployeeValidator(_context);
+            ValidationResult result = ev.Validate(employee);
+            return result;
         }
     }
 }

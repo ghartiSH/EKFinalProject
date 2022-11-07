@@ -1,5 +1,6 @@
 ﻿
 using DomainLayer.Models;
+using FluentValidation.Results;
 using ServiceLayer.ViewModels;
 
 namespace ServiceLayer.EmployeeService
@@ -19,7 +20,6 @@ namespace ServiceLayer.EmployeeService
         public void UpdateEmployeeHistory(EmployeeHistoryViewModel employeeHistoryModel);
         public void AddNewJob(EmployeeHistoryViewModel employeeHistoryModel);
         public void UpdateOldJob(EmployeeHistoryViewModel employeeHistoryModel);
-
-
+        public ValidationResult Validate(EmployeeViewModel employee);
     }
 }

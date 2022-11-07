@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UYO/XiemgsTQ7phGBd3h33mcb68ByPhN9k96Wg6AV7PuEPWGUgNsUAzgED2LzlaTe+B+onqQjde8zO8+533Aaw==",
+  "dgSpecHash": "XTLOhlxVwM1eOFGcAXPVZuSfimIwTrbx12Gmx8hHSLtmRvshNitB3jMkRO0ohJDGytyaiDXNncBQIUVHoYKPqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bhara\\Desktop\\AppDev Final\\FinalProject\\ServiceLayer\\ServiceLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bhara\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
