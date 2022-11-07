@@ -1,0 +1,24 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.card {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, rgba(240,239,252,1) 0%, rgba(233,233,246,1) 28%, rgba(183,183,195,1) 72%);
+}

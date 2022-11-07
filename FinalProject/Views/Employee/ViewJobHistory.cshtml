@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ServiceLayer.ViewModels.EmployeeHistoryViewModel>
+
+@{
+    ViewData["Title"] = "Job History";
+}
+
+<h1> Job history</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeHistoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewEndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeHistoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewStartDate)
+            </td>
+            <td>
+                @if (item.ViewEndDate == "1/1/0001")
+                {
+                    item.ViewEndDate = "-";
+                }
+                @Html.DisplayFor(modelItem => item.ViewEndDate)
+
+            </td>
+            <td>
+                <a class="btn btn-outline-warning" asp-action="UpdateEmployeeHistory" asp-route-employeeHistoryId="@item.EmployeeHistoryId" asp-route-employeeId = "@item.EmployeeId">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to Home</a>
+</div>

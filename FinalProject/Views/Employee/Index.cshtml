@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<head>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+</head>
+<h1>Employee's List</h1>
+<hr />
+<p>
+    <a asp-action="AddEmployee" class="btn btn-primary btn-lg">Add New Employee</a>
+</p>
+<div class="card">
+    <div class="card-body table-responsive">
+        <table class="table " id="example">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        FullName
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Emp Code
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                    <th>
+                        Start Date
+                    </th>
+                    <th>
+                
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script>
+
+        $(document).ready(function() {
+            $('#example').DataTable({
+                "processing": true,    
+                "serverSide": true,  
+                "ajax": {  
+                    "url": "Employee/LoadEmployeeData",
+                    "type": "POST",  
+                    "datatype": "json"
+                 },
+                columns: [
+                    { data: "employeeId", name:"EmployeeId"},
+                    { data: "fullName", name: "FullName"},
+                    { data: "email", name: "Email"},
+                    { data: "address", name: "Address"},
+                    { data: "employeeCode", name: "EmployeeCode"},
+                    { data: "positionName", name: "PositionName"},
+                    { data: "salary", name:"Salary"},
+                    { data: "viewStartDate", name: "StartDate"},
+                    { data: "employeeId", render: function(data, type, full, meta){
+                        return "<a class='btn btn-warning' href='/Employee/UpdateEmployee?employeeId="+ data + "'>Update</a>";
+                        
+                    }},
+                    { render: function(data, type, row, meta){
+                        return "<a class='btn btn-danger' onClick=DeleteEmployee('" + row.employeeId + "')>Delete</a>";
+                    }},
+                    { data: "employeeId", render: function(data, type, row, meta){
+                        return "<a class='btn btn-secondary' href='/Employee/ViewJobHistory?employeeId="+ data + "')>Job History</a>";
+                    }},
+                    { data: "employeeId", render: function(data, type, row, meta){
+                        return "<a class='btn btn-info' href='/Employee/AddNewTitle?employeeId="+ data + "')>New Job</a>";
+                    }}
+                ]
+            });
+        });
+
+        
+        function DeleteEmployee(empId) {
+            if (confirm("Are you sure you want to delete?")) {
+                Delete(empId);
+            } else {
+                return false;
+            }
+        }
+
+        function Delete(empId) {
+            $.ajax({
+                type: "POST",
+                url: "/Employee/DeleteEmployeeData/" + empId,
+                data: {employeeId:empId},
+                success: function () {
+                    alert("Employee Deleted");
+                    $("#example").DataTable().ajax.reload();
+                },
+            });
+        }
+
+    </script>
+}

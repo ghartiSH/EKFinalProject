@@ -1,0 +1,108 @@
+﻿@model ServiceLayer.ViewModels.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "UpdateEmployee";
+}
+<style>
+    label{
+        font-weight:700;
+    }
+</style>
+
+<h1>Update Employee Data</h1>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="UpdateEmployee">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Employee Details</h4>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input type="hidden"  asp-for="EmployeeId" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden"  asp-for="PeopleId" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden"  asp-for="PositionId" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control"/>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="MiddleName" class="control-label"></label>
+                        <input asp-for="MiddleName" class="form-control" />
+                        <span asp-validation-for="MiddleName" class="text-danger"></span>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div><br />
+            
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div><br />
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Job Details</h4>
+                    <hr />
+                    <h6 class="text-danger"> You cannot edit Employee's Job Details from here</h6>
+                    <div class="form-group">
+                        <label asp-for="PositionName" class="control-label"></label>
+                        <input asp-for="PositionName" class="form-control"  readonly="readonly"/>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="Salary" class="control-label"></label>
+                        <input asp-for="Salary" class="form-control" readonly="readonly"/>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="EmployeeCode" class="control-label"></label>
+                        <input asp-for="EmployeeCode" class="form-control" readonly="readonly"/>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="StartDate" class="control-label"></label>
+                        <input asp-for="StartDate" class="form-control" readonly="readonly" />
+                    </div><br />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Update Employee" class="btn btn-success" />
+            </div><br />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

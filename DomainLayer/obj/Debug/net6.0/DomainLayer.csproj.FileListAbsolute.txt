@@ -1,0 +1,12 @@
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\bin\Debug\net6.0\DomainLayer.deps.json
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\bin\Debug\net6.0\DomainLayer.dll
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\bin\Debug\net6.0\DomainLayer.pdb
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.csproj.AssemblyReference.cache
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.AssemblyInfoInputs.cache
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.AssemblyInfo.cs
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.dll
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\refint\DomainLayer.dll
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\DomainLayer.pdb
+C:\Users\bhara\Desktop\AppDev Final\FinalProject\DomainLayer\obj\Debug\net6.0\ref\DomainLayer.dll

@@ -1,0 +1,54 @@
+﻿@model ServiceLayer.ViewModels.EmployeeHistoryViewModel
+
+@{
+    ViewData["Title"] = "AddNewTitle";
+}
+<style>
+    label{
+        font-weight:700;
+    }
+</style>
+<h1>Add new Job Title for the Employee</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="AddNewTitle">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Job Details</h4>
+                    <hr />
+                     <div class="form-group">
+                        <label asp-for="EmployeeId" class="control-label"></label>
+                        <input asp-for="EmployeeId" class="form-control" type="hidden"/>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="PositionName" class="control-label"></label>
+                        <select asp-for="PositionName" class="form-control" asp-items="ViewBag.PositionName"></select><br />
+                        <p> Didn't find the position? <span><a asp-action="AddPosition" class="btn btn-outline-primary">Add New Position</a></span> </p>
+                    </div><br />
+
+                    <div class="form-group">
+                        <label asp-for="Salary" class="control-label"></label>
+                        <input asp-for="Salary" class="form-control" />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div><br />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Add Position for the Employee" class="btn btn-success" />
+            </div><br />
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
