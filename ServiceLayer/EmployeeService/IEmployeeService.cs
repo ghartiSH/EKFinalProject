@@ -17,6 +17,8 @@ namespace ServiceLayer.EmployeeService
         public List<Position> GetAllPositions();
         public List<EmployeeHistoryViewModel> GetAllHistories(int employeeId);
         public EmployeeHistory GetHistoryById(int historyId);
+        public EmployeeHistoryViewModel GetHistoryViewModelById(int historyId);
+
         public void UpdateEmployeeHistory(EmployeeHistoryViewModel employeeHistoryModel);
         public void AddNewJob(EmployeeHistoryViewModel employeeHistoryModel);
         public void UpdateOldJob(EmployeeHistoryViewModel employeeHistoryModel);

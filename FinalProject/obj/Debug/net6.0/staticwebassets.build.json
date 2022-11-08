@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/FGJrO36AUAlQSiUsC5mDo4tm8wC4C5VapYpG4Gr4B8=",
+  "Hash": "riPP0Dav+kAYUShAubhKkpYGXmbSCpRwzWPiI0K7yiw=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\bhara\\Desktop\\AppDev Final\\FinalProject\\FinalProject\\wwwroot\\js\\Employee.js",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bhara\\Desktop\\AppDev Final\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "js/Employee.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Employee.js"
     },
     {
       "Identity": "C:\\Users\\bhara\\Desktop\\AppDev Final\\FinalProject\\FinalProject\\wwwroot\\js\\site.js",

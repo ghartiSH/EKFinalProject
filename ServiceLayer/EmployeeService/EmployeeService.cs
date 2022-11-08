@@ -101,6 +101,8 @@ namespace ServiceLayer.EmployeeService
         public void DeleteEmployeeData(int employeeId)
         {
             var employee = GetEmployeeById(employeeId);
+            
+            employee.EndDate = DateTime.Today;
             employee.IsDisabled = true;
 
             _context.Employees?.Update(employee);
@@ -197,6 +199,21 @@ namespace ServiceLayer.EmployeeService
         public EmployeeHistory GetHistoryById(int historyId)
         {
             return (_context.EmployeeHistories.FirstOrDefault(h => h.EmployeeHistoryId == historyId));
+        }
+
+
+        public EmployeeHistoryViewModel GetHistoryViewModelById(int historyId)
+        {
+            var history = GetHistoryById(historyId);
+            EmployeeHistoryViewModel historyModel = new EmployeeHistoryViewModel()
+            {
+                EmployeeHistoryId=historyId,
+                EmployeeId=history.EmployeeId,
+                PositionId=history.PositionId,
+                StartDate=history.StartDate,
+                EndDate = history.EndDate
+            };
+            return historyModel;
         }
 
         public void UpdateEmployeeHistory(EmployeeHistoryViewModel employeeHistoryModel)

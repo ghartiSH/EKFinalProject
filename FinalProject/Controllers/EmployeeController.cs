@@ -150,7 +150,7 @@ namespace FinalProject.Controllers
         public IActionResult UpdateEmployeeHistory(int employeeHistoryId, int employeeId)
         {
             ViewData["EmployeeId"] = employeeId;
-            var history = employeeService.GetHistoryById(employeeHistoryId);
+            var history = employeeService.GetHistoryViewModelById(employeeHistoryId);
             return View(history);
         }
 

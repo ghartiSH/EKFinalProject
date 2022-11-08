@@ -20,8 +20,8 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="FirstName" class="control-label"></label>
-                        <input asp-for="FirstName" class="form-control" />
-                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                        <input asp-for="FirstName" class="form-control" id="firstname"/>
+                        <span asp-validation-for="FirstName" class="text-danger" id="firstname-error-msg"></span>
                     </div><br />
 
                     <div class="form-group">
@@ -38,14 +38,14 @@
             
                     <div class="form-group">
                         <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
+                        <input asp-for="Email" class="form-control" id="email"/>
+                        <span asp-validation-for="Email" class="text-danger" id="email-error-msg"></span>
                     </div><br />
 
                     <div class="form-group">
                         <label asp-for="Address" class="control-label"></label>
-                        <input asp-for="Address" class="form-control" />
-                        <span asp-validation-for="Address" class="text-danger"></span>
+                        <input asp-for="Address" class="form-control" id="address"/>
+                        <span asp-validation-for="Address" class="text-danger" id="address-error-msg"></span>
                     </div><br />
                 </div>
             </div>
@@ -62,14 +62,14 @@
 
                     <div class="form-group">
                         <label asp-for="Salary" class="control-label"></label>
-                        <input asp-for="Salary" class="form-control" />
-                        <span asp-validation-for="Salary" class="text-danger"></span>
+                        <input asp-for="Salary" class="form-control" id="salary"/>
+                        <span asp-validation-for="Salary" class="text-danger" id="salary-errror-msg"></span>
                     </div><br />
 
                     <div class="form-group">
                         <label asp-for="EmployeeCode" class="control-label"></label>
-                        <input asp-for="EmployeeCode" class="form-control" />
-                        <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+                        <input asp-for="EmployeeCode" class="form-control" id="ecode"/>
+                        <span asp-validation-for="EmployeeCode" class="text-danger" id="ecode-error-msg"></span>
                     </div><br />
                </div>
            </div>
@@ -86,5 +86,6 @@
 </div>
 
 @section Scripts {
+    <script src=~/js/Employee.js></script>
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -9,6 +9,22 @@ namespace ServiceLayer.ViewModels.Validators
         {
             _context = context;
 
+            RuleFor(x => x.FirstName)
+                .NotEmpty()
+                .WithMessage("First name must not be empty");
+
+            RuleFor(x => x.Address)
+                .NotEmpty()
+                .WithMessage("Address must not be empty");
+
+            RuleFor(x => x.Salary)
+                .NotEmpty()
+                .WithMessage("Salary must not be empty");
+
+            RuleFor(x => x.EmployeeCode)
+                .NotEmpty()
+                .WithMessage("Employee Code must not be empty");
+
             RuleFor(x => x.Email)
                 .NotEmpty()
                 .WithMessage("Email must not be empty")
